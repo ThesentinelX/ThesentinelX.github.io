@@ -1,112 +1,138 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Vladislav | Ingénieur Smart Building & IT</title>
-  <meta name="description" content="Ingénieur Smart Building & IT spécialisé dans l’intégration de systèmes connectés pour le bâtiment." />
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Vladislav | Ingénieur Smart Building & IT</title>
 
-  <style>
-    :root{
-      --bg1:#0b1220;
-      --bg2:#0b1b33;
-      --card:rgba(255,255,255,.06);
-      --text:#eaf1ff;
-      --muted:rgba(234,241,255,.75);
-      --accent:#38bdf8;
-      --accent2:#22c55e;
-      --border:rgba(255,255,255,.12);
-      --radius:16px;
-      --shadow:0 15px 50px rgba(0,0,0,.35);
-    }
+<style>
+:root{
+  --bg1:#0a111a;
+  --bg2:#0e1a28;
+  --card:rgba(255,255,255,.05);
+  --border:rgba(255,255,255,.08);
+  --text:#f1f5ff;
+  --muted:rgba(255,255,255,.65);
+  --accent:#38bdf8;
+}
 
-    *{box-sizing:border-box}
-    body{
-      margin:0;
-      font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial;
-      color:var(--text);
-      background:
-        radial-gradient(800px 500px at 20% 10%, rgba(56,189,248,.20), transparent 60%),
-        radial-gradient(800px 500px at 80% 20%, rgba(34,197,94,.12), transparent 60%),
-        linear-gradient(180deg,var(--bg1),var(--bg2));
-    }
+*{box-sizing:border-box}
 
-    .wrap{max-width:1100px;margin:auto;padding:40px 20px}
-    h1{font-size:48px;margin-bottom:10px}
-    h2{font-size:22px;margin-bottom:10px}
-    p{line-height:1.6;color:var(--muted)}
-    .hero{margin-bottom:40px}
-    .card{
-      background:var(--card);
-      border:1px solid var(--border);
-      border-radius:var(--radius);
-      padding:24px;
-      margin-bottom:20px;
-      box-shadow:var(--shadow);
-    }
+body{
+  margin:0;
+  font-family:system-ui,-apple-system,Segoe UI,Roboto,Arial;
+  color:var(--text);
+  background:linear-gradient(180deg,var(--bg1),var(--bg2));
+}
 
-    .skills, .contact{display:grid;gap:16px}
-    @media(min-width:800px){
-      .skills{grid-template-columns:1fr 1fr}
-      .contact{grid-template-columns:1fr 1fr}
-    }
+.wrapper{
+  max-width:1000px;
+  margin:0 auto;
+  padding:60px 20px 80px;
+  text-align:center;
+}
 
-    .tag{
-      display:inline-block;
-      padding:6px 12px;
-      border-radius:999px;
-      border:1px solid var(--border);
-      margin:5px 6px 0 0;
-      font-size:13px;
-      color:var(--muted);
-      background:rgba(255,255,255,.04);
-    }
+h1{
+  font-size:52px;
+  margin-bottom:8px;
+  letter-spacing:.5px;
+}
 
-    a.button{
-      display:inline-block;
-      margin-top:15px;
-      padding:10px 16px;
-      border-radius:12px;
-      border:1px solid var(--accent);
-      background:rgba(56,189,248,.15);
-      color:white;
-      text-decoration:none;
-      font-weight:600;
-    }
+h2{
+  font-size:20px;
+  color:var(--accent);
+  margin-bottom:20px;
+  font-weight:600;
+}
 
-    footer{
-      margin-top:40px;
-      text-align:center;
-      font-size:14px;
-      color:rgba(255,255,255,.5);
-    }
-  </style>
+p{
+  color:var(--muted);
+  line-height:1.7;
+  max-width:800px;
+  margin:0 auto 25px;
+}
+
+.section{
+  margin-top:35px;
+}
+
+.card{
+  background:var(--card);
+  border:1px solid var(--border);
+  border-radius:16px;
+  padding:28px;
+  margin:15px auto;
+  text-align:left;
+}
+
+.grid-2{
+  display:grid;
+  gap:20px;
+}
+
+@media(min-width:850px){
+  .grid-2{grid-template-columns:1fr 1fr;}
+}
+
+.tags{
+  margin-top:10px;
+}
+
+.tag{
+  display:inline-block;
+  margin:6px 6px 0 0;
+  padding:7px 14px;
+  border-radius:999px;
+  border:1px solid var(--border);
+  font-size:13px;
+  color:var(--muted);
+}
+
+.button{
+  display:inline-block;
+  margin-top:15px;
+  padding:10px 18px;
+  border-radius:12px;
+  border:1px solid var(--accent);
+  color:white;
+  text-decoration:none;
+  font-weight:600;
+}
+
+footer{
+  margin-top:50px;
+  font-size:13px;
+  color:rgba(255,255,255,.4);
+}
+</style>
 </head>
 
 <body>
-<div class="wrap">
 
-  <section class="hero">
-    <h1>Vladislav</h1>
-    <h2>Ingénieur Smart Building & IT</h2>
-    <p>
-      Spécialisé dans la conception et l’intégration de systèmes connectés pour le bâtiment.
-      J’interviens sur des projets résidentiels où l’électricité, la domotique et l’IT doivent fonctionner
-      comme une seule infrastructure fiable, sécurisée et évolutive.
-    </p>
-  </section>
+<div class="wrapper">
 
-  <div class="card">
-    <h2>Expertise</h2>
-    <span class="tag">Domotique KNX & automatisation</span>
-    <span class="tag">Réseaux IP & PoE</span>
-    <span class="tag">Vidéosurveillance & sécurité</span>
-    <span class="tag">Bornes de recharge intelligentes</span>
-    <span class="tag">Intégration & supervision des systèmes</span>
+  <h1>Vladislav</h1>
+  <h2>Ingénieur Smart Building & IT</h2>
+
+  <p>
+    Spécialisé dans la conception et l’intégration de systèmes connectés pour le bâtiment.
+    J’interviens sur des projets résidentiels où l’électricité, la domotique et l’IT fonctionnent
+    comme une seule infrastructure fiable, sécurisée et évolutive.
+  </p>
+
+  <div class="section card">
+    <h3>Expertise</h3>
+    <div class="tags">
+      <span class="tag">Domotique KNX & automatisation</span>
+      <span class="tag">Réseaux IP & PoE</span>
+      <span class="tag">Vidéosurveillance & sécurité</span>
+      <span class="tag">Bornes de recharge intelligentes</span>
+      <span class="tag">Intégration & supervision des systèmes</span>
+    </div>
   </div>
 
-  <div class="card">
-    <h2>Approche</h2>
+  <div class="section card">
+    <h3>Approche</h3>
     <p>
       Mon approche est orientée ingénierie, architecture des systèmes et qualité d’exécution.
       Chaque solution est pensée pour être durable, maintenable et parfaitement intégrée à l’environnement
@@ -114,38 +140,36 @@
     </p>
   </div>
 
-  <div class="skills">
+  <div class="section grid-2">
     <div class="card">
-      <h2>Compétences Techniques</h2>
+      <h3>Compétences Techniques</h3>
       <p>KNX • Réseaux structurés • VLAN • VPN • Docker • Linux • Intégration IT/OT</p>
     </div>
+
     <div class="card">
-      <h2>Domaines d’intervention</h2>
+      <h3>Domaines d’intervention</h3>
       <p>Résidentiel haut de gamme • Villas connectées • Rénovation technique • Infrastructures intelligentes</p>
     </div>
   </div>
 
-  <div class="contact">
+  <div class="section grid-2">
     <div class="card">
-      <h2>Localisation</h2>
+      <h3>Localisation</h3>
       <p>📍 Sud de la France</p>
     </div>
+
     <div class="card">
-      <h2>Contact professionnel</h2>
+      <h3>Contact professionnel</h3>
       <p>📩 Projets • partenariats • sous-traitance</p>
       <a class="button" href="https://github.com/ThesentinelX" target="_blank">Profil GitHub</a>
     </div>
   </div>
 
   <footer>
-    © <span id="year"></span> Vladislav — Smart Building & IT Engineering
+    © 2026 Vladislav — Smart Building & IT Engineering
   </footer>
 
 </div>
-
-<script>
-  document.getElementById("year").textContent = new Date().getFullYear();
-</script>
 
 </body>
 </html>
