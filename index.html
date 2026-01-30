@@ -1,400 +1,151 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Vladislav | Portfolio</title>
-  <meta name="description" content="Vladislav — Electrician, Smart Home, HomeLab & Python. Projects, skills and contact." />
+  <title>Vladislav | Ingénieur Smart Building & IT</title>
+  <meta name="description" content="Ingénieur Smart Building & IT spécialisé dans l’intégration de systèmes connectés pour le bâtiment." />
 
   <style>
     :root{
       --bg1:#0b1220;
       --bg2:#0b1b33;
       --card:rgba(255,255,255,.06);
-      --card2:rgba(255,255,255,.08);
       --text:#eaf1ff;
-      --muted:rgba(234,241,255,.70);
-      --muted2:rgba(234,241,255,.55);
+      --muted:rgba(234,241,255,.75);
       --accent:#38bdf8;
       --accent2:#22c55e;
       --border:rgba(255,255,255,.12);
-      --shadow: 0 12px 40px rgba(0,0,0,.35);
       --radius:16px;
+      --shadow:0 15px 50px rgba(0,0,0,.35);
     }
 
     *{box-sizing:border-box}
-    html,body{height:100%}
     body{
       margin:0;
+      font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial;
       color:var(--text);
-      font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Arial, "Apple Color Emoji","Segoe UI Emoji";
       background:
-        radial-gradient(900px 500px at 20% 10%, rgba(56,189,248,.20), transparent 60%),
-        radial-gradient(800px 500px at 80% 20%, rgba(34,197,94,.14), transparent 60%),
-        linear-gradient(180deg, var(--bg1), var(--bg2));
+        radial-gradient(800px 500px at 20% 10%, rgba(56,189,248,.20), transparent 60%),
+        radial-gradient(800px 500px at 80% 20%, rgba(34,197,94,.12), transparent 60%),
+        linear-gradient(180deg,var(--bg1),var(--bg2));
     }
 
-    a{color:inherit; text-decoration:none}
-    .wrap{max-width:1020px; margin:0 auto; padding:28px 18px 60px}
-    .topbar{
-      display:flex; align-items:center; justify-content:space-between;
-      padding:10px 0 18px;
-    }
-    .brand{
-      display:flex; gap:10px; align-items:center;
-      font-weight:700; letter-spacing:.2px;
-    }
-    .dot{
-      width:10px; height:10px; border-radius:999px;
-      background:linear-gradient(135deg,var(--accent),var(--accent2));
-      box-shadow:0 0 0 4px rgba(56,189,248,.12);
-    }
-    .nav{
-      display:flex; gap:14px; flex-wrap:wrap;
-      color:var(--muted);
-      font-size:14px;
-    }
-    .nav a{padding:8px 10px; border-radius:999px; border:1px solid transparent}
-    .nav a:hover{border-color:var(--border); background:rgba(255,255,255,.04)}
-
-    .hero{
-      margin-top:10px;
-      padding:28px 22px;
-      border:1px solid var(--border);
-      background: linear-gradient(180deg, rgba(255,255,255,.06), rgba(255,255,255,.03));
-      border-radius: var(--radius);
-      box-shadow: var(--shadow);
-      position:relative;
-      overflow:hidden;
-    }
-    .hero:before{
-      content:"";
-      position:absolute; inset:-2px;
-      background: radial-gradient(500px 220px at 30% 0%, rgba(56,189,248,.18), transparent 60%);
-      pointer-events:none;
-    }
-    .hero-grid{
-      display:grid; grid-template-columns: 1.2fr .8fr;
-      gap:18px;
-      position:relative;
-    }
-    @media (max-width: 860px){
-      .hero-grid{grid-template-columns:1fr}
-    }
-
-    .kicker{color:var(--muted); font-size:14px; letter-spacing:.3px}
-    h1{
-      margin:10px 0 8px;
-      font-size:44px;
-      line-height:1.05;
-      letter-spacing:.2px;
-    }
-    .subtitle{
-      margin:0;
-      color:var(--muted);
-      font-size:16px;
-      line-height:1.55;
-      max-width:60ch;
-    }
-    .chips{
-      margin-top:14px;
-      display:flex; gap:10px; flex-wrap:wrap;
-    }
-    .chip{
-      font-size:13px;
-      color:var(--muted);
-      border:1px solid var(--border);
-      background:rgba(255,255,255,.04);
-      padding:7px 10px;
-      border-radius:999px;
-    }
-    .cta{
-      margin-top:18px;
-      display:flex; gap:12px; flex-wrap:wrap;
-    }
-    .btn{
-      display:inline-flex; align-items:center; justify-content:center;
-      gap:10px;
-      padding:10px 14px;
-      border-radius:12px;
-      border:1px solid var(--border);
-      background: rgba(255,255,255,.04);
-      color:var(--text);
-      font-weight:600;
-      font-size:14px;
-      transition: transform .15s ease, background .15s ease, border-color .15s ease;
-    }
-    .btn:hover{transform: translateY(-1px); background: rgba(255,255,255,.07); border-color: rgba(255,255,255,.18)}
-    .btn.primary{
-      border-color: rgba(56,189,248,.45);
-      background: linear-gradient(180deg, rgba(56,189,248,.22), rgba(56,189,248,.12));
-    }
-    .btn.primary:hover{border-color: rgba(56,189,248,.70)}
-
+    .wrap{max-width:1100px;margin:auto;padding:40px 20px}
+    h1{font-size:48px;margin-bottom:10px}
+    h2{font-size:22px;margin-bottom:10px}
+    p{line-height:1.6;color:var(--muted)}
+    .hero{margin-bottom:40px}
     .card{
+      background:var(--card);
       border:1px solid var(--border);
-      background: rgba(255,255,255,.04);
-      border-radius: var(--radius);
-      padding:18px;
-    }
-    .profile{
-      display:flex; flex-direction:column; gap:10px;
-      justify-content:center;
-      height:100%;
-    }
-    .metric{
-      display:flex; justify-content:space-between; gap:12px;
-      padding:10px 12px;
-      border:1px solid var(--border);
-      background: rgba(255,255,255,.03);
-      border-radius: 12px;
-      color:var(--muted);
-      font-size:14px;
-    }
-    .metric strong{color:var(--text); font-weight:700}
-
-    .section{
-      margin-top:22px;
-      display:grid;
-      grid-template-columns: 1fr 1fr;
-      gap:16px;
-    }
-    @media (max-width: 860px){
-      .section{grid-template-columns:1fr}
-    }
-    .section h2{
-      margin:0 0 8px;
-      font-size:18px;
-      letter-spacing:.2px;
-    }
-    .section p{
-      margin:0;
-      color:var(--muted);
-      line-height:1.6;
-      font-size:14.5px;
+      border-radius:var(--radius);
+      padding:24px;
+      margin-bottom:20px;
+      box-shadow:var(--shadow);
     }
 
-    .projects{
-      margin-top:16px;
-      display:grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap:14px;
+    .skills, .contact{display:grid;gap:16px}
+    @media(min-width:800px){
+      .skills{grid-template-columns:1fr 1fr}
+      .contact{grid-template-columns:1fr 1fr}
     }
-    @media (max-width: 980px){
-      .projects{grid-template-columns:1fr}
-    }
-    .p-card{
-      border:1px solid var(--border);
-      background: linear-gradient(180deg, rgba(255,255,255,.05), rgba(255,255,255,.03));
-      border-radius: var(--radius);
-      padding:16px;
-      transition: transform .15s ease, border-color .15s ease;
-    }
-    .p-card:hover{transform: translateY(-2px); border-color: rgba(255,255,255,.22)}
-    .p-title{
-      display:flex; align-items:center; justify-content:space-between;
-      gap:10px;
-      margin:0 0 8px;
-      font-weight:800;
-      letter-spacing:.2px;
-    }
+
     .tag{
-      font-size:12px;
-      color:rgba(56,189,248,.95);
-      border:1px solid rgba(56,189,248,.35);
-      background: rgba(56,189,248,.10);
-      padding:4px 8px;
+      display:inline-block;
+      padding:6px 12px;
       border-radius:999px;
-      white-space:nowrap;
-    }
-    .p-desc{color:var(--muted); font-size:14px; line-height:1.55; margin:0 0 12px}
-    .p-links{display:flex; gap:10px; flex-wrap:wrap}
-    .p-links a{
-      font-size:13px;
-      color:var(--text);
       border:1px solid var(--border);
-      background: rgba(255,255,255,.03);
-      padding:7px 10px;
-      border-radius:12px;
-    }
-    .p-links a:hover{border-color: rgba(255,255,255,.20); background: rgba(255,255,255,.06)}
-    footer{
-      margin-top:26px;
-      color:var(--muted2);
+      margin:5px 6px 0 0;
       font-size:13px;
-      text-align:center;
+      color:var(--muted);
+      background:rgba(255,255,255,.04);
     }
-    .small{
-      color:var(--muted2);
-      font-size:12.5px;
-      line-height:1.5;
+
+    a.button{
+      display:inline-block;
+      margin-top:15px;
+      padding:10px 16px;
+      border-radius:12px;
+      border:1px solid var(--accent);
+      background:rgba(56,189,248,.15);
+      color:white;
+      text-decoration:none;
+      font-weight:600;
+    }
+
+    footer{
+      margin-top:40px;
+      text-align:center;
+      font-size:14px;
+      color:rgba(255,255,255,.5);
     }
   </style>
 </head>
 
 <body>
-  <div class="wrap">
+<div class="wrap">
 
-    <div class="topbar">
-      <div class="brand">
-        <span class="dot"></span>
-        <span>Vladislav</span>
-      </div>
-      <div class="nav">
-        <a href="#about">About</a>
-        <a href="#projects">Projects</a>
-        <a href="#skills">Skills</a>
-        <a href="#contact">Contact</a>
-      </div>
-    </div>
+  <section class="hero">
+    <h1>Vladislav</h1>
+    <h2>Ingénieur Smart Building & IT</h2>
+    <p>
+      Spécialisé dans la conception et l’intégration de systèmes connectés pour le bâtiment.
+      J’interviens sur des projets résidentiels où l’électricité, la domotique et l’IT doivent fonctionner
+      comme une seule infrastructure fiable, sécurisée et évolutive.
+    </p>
+  </section>
 
-    <section class="hero" id="about">
-      <div class="hero-grid">
-        <div>
-          <div class="kicker">Portfolio • Tech & Automation</div>
-          <h1>Electrician + HomeLab + Python</h1>
-          <p class="subtitle">
-            I build reliable electrical systems and smart automation, and I’m developing strong IT skills in networking,
-            self-hosting and security. This page is a clean overview of what I do and what I’m building next.
-          </p>
-
-          <div class="chips">
-            <span class="chip">Docker / Portainer</span>
-            <span class="chip">Linux servers</span>
-            <span class="chip">DNS (Pi-hole + Unbound)</span>
-            <span class="chip">VPN (WireGuard)</span>
-            <span class="chip">Smart Home</span>
-          </div>
-
-          <div class="cta">
-            <a class="btn primary" href="https://github.com/ThesentinelX/portfolio" target="_blank" rel="noreferrer">
-              View GitHub Portfolio →
-            </a>
-            <a class="btn" href="https://github.com/ThesentinelX" target="_blank" rel="noreferrer">
-              GitHub Profile
-            </a>
-          </div>
-
-          <p class="small" style="margin-top:12px;">
-            Tip: keep adding small, real projects weekly — GitHub loves consistency (and so do recruiters).
-          </p>
-        </div>
-
-        <div class="card profile">
-          <div class="metric"><span>Location</span><strong>France</strong></div>
-          <div class="metric"><span>Focus</span><strong>Automation + Security</strong></div>
-          <div class="metric"><span>Now learning</span><strong>Python</strong></div>
-          <div class="metric"><span>Next goal</span><strong>Network tools & scripts</strong></div>
-          <div class="metric"><span>Available</span><strong>Projects / collaborations</strong></div>
-        </div>
-      </div>
-    </section>
-
-    <div class="section">
-      <div class="card">
-        <h2>What I do</h2>
-        <p>
-          Electrical installations, smart home integration, CCTV/security, and building self-hosted services in a home lab.
-          I like clean setups, documentation, and “works every day” reliability.
-        </p>
-      </div>
-      <div class="card">
-        <h2>What I’m building next</h2>
-        <p>
-          Practical Python automation for real needs: monitoring, logs, network checks, backups, and “make it simple” tools
-          that save time in the field.
-        </p>
-      </div>
-    </div>
-
-    <section id="projects">
-      <h2 style="margin:22px 2px 10px;">Projects</h2>
-      <div class="projects">
-
-        <div class="p-card">
-          <div class="p-title">HomeLab Security Stack <span class="tag">Networking</span></div>
-          <p class="p-desc">
-            DNS filtering + recursive resolver + VPN access. Designed for privacy, reliability and control.
-          </p>
-          <div class="p-links">
-            <a href="https://github.com/ThesentinelX/portfolio" target="_blank" rel="noreferrer">Repository</a>
-            <a href="#contact">Contact</a>
-          </div>
-        </div>
-
-        <div class="p-card">
-          <div class="p-title">Python Automation <span class="tag">Python</span></div>
-          <p class="p-desc">
-            Small scripts for daily tasks: checks, parsing, notifications, automation. Built step by step.
-          </p>
-          <div class="p-links">
-            <a href="https://github.com/ThesentinelX/portfolio" target="_blank" rel="noreferrer">Repository</a>
-            <a href="#skills">Skills</a>
-          </div>
-        </div>
-
-        <div class="p-card">
-          <div class="p-title">Smart Home Installations <span class="tag">Automation</span></div>
-          <p class="p-desc">
-            Practical automation mindset: stability first. Lighting, control, monitoring, and clean documentation.
-          </p>
-          <div class="p-links">
-            <a href="https://github.com/ThesentinelX" target="_blank" rel="noreferrer">Profile</a>
-            <a href="#contact">Contact</a>
-          </div>
-        </div>
-
-      </div>
-    </section>
-
-    <section id="skills" style="margin-top:18px;">
-      <h2 style="margin:22px 2px 10px;">Skills</h2>
-      <div class="section">
-        <div class="card">
-          <h2>IT & Networking</h2>
-          <p>
-            Docker, Linux administration, DNS (Pi-hole + Unbound), VPN (WireGuard/Tailscale), monitoring (Uptime Kuma),
-            and secure home network design.
-          </p>
-        </div>
-        <div class="card">
-          <h2>Automation & Electrical</h2>
-          <p>
-            Smart home integration, CCTV/security systems, structured cabling, and professional electrical work with focus on
-            quality and clean finish.
-          </p>
-        </div>
-      </div>
-    </section>
-
-    <section id="contact" style="margin-top:18px;">
-      <h2 style="margin:22px 2px 10px;">Contact</h2>
-      <div class="section">
-        <div class="card">
-          <h2>GitHub</h2>
-          <p><a class="btn" style="display:inline-flex" href="https://github.com/ThesentinelX" target="_blank" rel="noreferrer">github.com/ThesentinelX</a></p>
-          <p class="small" style="margin-top:10px;">If you want, I can add LinkedIn/email buttons too.</p>
-        </div>
-        <div class="card">
-          <h2>Quick message</h2>
-          <p class="small">
-            Add your email here when ready (recommended: a dedicated professional email).
-          </p>
-          <p class="small">
-            Example: <strong>vladislav.pro@…</strong> (no need to expose your personal inbox).
-          </p>
-        </div>
-      </div>
-    </section>
-
-    <footer>
-      © <span id="y"></span> Vladislav • Built with GitHub Pages
-    </footer>
-
+  <div class="card">
+    <h2>Expertise</h2>
+    <span class="tag">Domotique KNX & automatisation</span>
+    <span class="tag">Réseaux IP & PoE</span>
+    <span class="tag">Vidéosurveillance & sécurité</span>
+    <span class="tag">Bornes de recharge intelligentes</span>
+    <span class="tag">Intégration & supervision des systèmes</span>
   </div>
 
-  <script>
-    document.getElementById('y').textContent = new Date().getFullYear();
-  </script>
+  <div class="card">
+    <h2>Approche</h2>
+    <p>
+      Mon approche est orientée ingénierie, architecture des systèmes et qualité d’exécution.
+      Chaque solution est pensée pour être durable, maintenable et parfaitement intégrée à l’environnement
+      du bâtiment, avec une attention particulière portée à la propreté et à la rigueur du chantier.
+    </p>
+  </div>
+
+  <div class="skills">
+    <div class="card">
+      <h2>Compétences Techniques</h2>
+      <p>KNX • Réseaux structurés • VLAN • VPN • Docker • Linux • Intégration IT/OT</p>
+    </div>
+    <div class="card">
+      <h2>Domaines d’intervention</h2>
+      <p>Résidentiel haut de gamme • Villas connectées • Rénovation technique • Infrastructures intelligentes</p>
+    </div>
+  </div>
+
+  <div class="contact">
+    <div class="card">
+      <h2>Localisation</h2>
+      <p>📍 Sud de la France</p>
+    </div>
+    <div class="card">
+      <h2>Contact professionnel</h2>
+      <p>📩 Projets • partenariats • sous-traitance</p>
+      <a class="button" href="https://github.com/ThesentinelX" target="_blank">Profil GitHub</a>
+    </div>
+  </div>
+
+  <footer>
+    © <span id="year"></span> Vladislav — Smart Building & IT Engineering
+  </footer>
+
+</div>
+
+<script>
+  document.getElementById("year").textContent = new Date().getFullYear();
+</script>
+
 </body>
 </html>
