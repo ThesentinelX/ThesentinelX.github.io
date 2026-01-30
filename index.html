@@ -1,175 +1,71 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-<title>Vladislav | Ingénieur Smart Building & IT</title>
-
-<style>
-:root{
-  --bg1:#0a111a;
-  --bg2:#0e1a28;
-  --card:rgba(255,255,255,.05);
-  --border:rgba(255,255,255,.08);
-  --text:#f1f5ff;
-  --muted:rgba(255,255,255,.65);
-  --accent:#38bdf8;
-}
-
-*{box-sizing:border-box}
-
-body{
-  margin:0;
-  font-family:system-ui,-apple-system,Segoe UI,Roboto,Arial;
-  color:var(--text);
-  background:linear-gradient(180deg,var(--bg1),var(--bg2));
-}
-
-.wrapper{
-  max-width:1000px;
-  margin:0 auto;
-  padding:60px 20px 80px;
-  text-align:center;
-}
-
-h1{
-  font-size:52px;
-  margin-bottom:8px;
-  letter-spacing:.5px;
-}
-
-h2{
-  font-size:20px;
-  color:var(--accent);
-  margin-bottom:20px;
-  font-weight:600;
-}
-
-p{
-  color:var(--muted);
-  line-height:1.7;
-  max-width:800px;
-  margin:0 auto 25px;
-}
-
-.section{
-  margin-top:35px;
-}
-
-.card{
-  background:var(--card);
-  border:1px solid var(--border);
-  border-radius:16px;
-  padding:28px;
-  margin:15px auto;
-  text-align:left;
-}
-
-.grid-2{
-  display:grid;
-  gap:20px;
-}
-
-@media(min-width:850px){
-  .grid-2{grid-template-columns:1fr 1fr;}
-}
-
-.tags{
-  margin-top:10px;
-}
-
-.tag{
-  display:inline-block;
-  margin:6px 6px 0 0;
-  padding:7px 14px;
-  border-radius:999px;
-  border:1px solid var(--border);
-  font-size:13px;
-  color:var(--muted);
-}
-
-.button{
-  display:inline-block;
-  margin-top:15px;
-  padding:10px 18px;
-  border-radius:12px;
-  border:1px solid var(--accent);
-  color:white;
-  text-decoration:none;
-  font-weight:600;
-}
-
-footer{
-  margin-top:50px;
-  font-size:13px;
-  color:rgba(255,255,255,.4);
-}
-</style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Vladislav | Smart Home & Electrical Engineer</title>
+  <link rel="stylesheet" href="style.css" />
 </head>
-
 <body>
 
-<div class="wrapper">
+  <div class="container">
 
-  <h1>Vladislav</h1>
-  <h2>Ingénieur Smart Building & IT</h2>
+    <!-- LEFT CARD -->
+    <div class="card profile-card">
+      <img src="avatar.jpg" alt="Vladislav" class="avatar" />
 
-  <p>
-    Spécialisé dans la conception et l’intégration de systèmes connectés pour le bâtiment.
-    J’interviens sur des projets résidentiels où l’électricité, la domotique et l’IT fonctionnent
-    comme une seule infrastructure fiable, sécurisée et évolutive.
-  </p>
+      <h1>⚡ Vladislav</h1>
+      <p class="subtitle">
+        Smart Home • Électricité Haut de Gamme • Automation KNX
+      </p>
 
-  <div class="section card">
-    <h3>Expertise</h3>
-    <div class="tags">
-      <span class="tag">Domotique KNX & automatisation</span>
-      <span class="tag">Réseaux IP & PoE</span>
-      <span class="tag">Vidéosurveillance & sécurité</span>
-      <span class="tag">Bornes de recharge intelligentes</span>
-      <span class="tag">Intégration & supervision des systèmes</span>
+      <p class="description">
+        Professionnel passionné par l’électricité moderne, la domotique et
+        les installations premium pour villas et résidences de luxe
+        sur la Côte d’Azur.
+      </p>
+
+      <div class="socials">
+        <a href="https://www.linkedin.com" target="_blank">in</a>
+        <a href="https://www.instagram.com" target="_blank">ig</a>
+        <a href="https://github.com" target="_blank">gh</a>
+        <a href="mailto:youremail@email.com">@</a>
+      </div>
+
+      <a href="#" class="btn">📄 Télécharger le CV</a>
     </div>
+
+    <!-- RIGHT CARD -->
+    <div class="card code-card">
+<pre><code>const engineer = {
+  name: "Vladislav",
+  company: "Voltmax Électricité",
+  location: "France 🇫🇷 | Côte d’Azur",
+
+  specialization: [
+    "Électricité résidentielle haut de gamme",
+    "Domotique KNX",
+    "Vidéosurveillance",
+    "Systèmes d’alarme",
+    "Bornes de recharge EV"
+  ],
+
+  clients: "Villas & propriétés premium",
+
+  tools: [
+    "KNX",
+    "Hager",
+    "Schneider",
+    "Ajax",
+    "Hikvision",
+    "Dahua"
+  ],
+
+  status: "Disponible pour nouveaux projets",
+};</code></pre>
+    </div>
+
   </div>
-
-  <div class="section card">
-    <h3>Approche</h3>
-    <p>
-      Mon approche est orientée ingénierie, architecture des systèmes et qualité d’exécution.
-      Chaque solution est pensée pour être durable, maintenable et parfaitement intégrée à l’environnement
-      du bâtiment, avec une attention particulière portée à la propreté et à la rigueur du chantier.
-    </p>
-  </div>
-
-  <div class="section grid-2">
-    <div class="card">
-      <h3>Compétences Techniques</h3>
-      <p>KNX • Réseaux structurés • VLAN • VPN • Docker • Linux • Intégration IT/OT</p>
-    </div>
-
-    <div class="card">
-      <h3>Domaines d’intervention</h3>
-      <p>Résidentiel haut de gamme • Villas connectées • Rénovation technique • Infrastructures intelligentes</p>
-    </div>
-  </div>
-
-  <div class="section grid-2">
-    <div class="card">
-      <h3>Localisation</h3>
-      <p>📍 Sud de la France</p>
-    </div>
-
-    <div class="card">
-      <h3>Contact professionnel</h3>
-      <p>📩 Projets • partenariats • sous-traitance</p>
-      <a class="button" href="https://github.com/ThesentinelX" target="_blank">Profil GitHub</a>
-    </div>
-  </div>
-
-  <footer>
-    © 2026 Vladislav — Smart Building & IT Engineering
-  </footer>
-
-</div>
 
 </body>
 </html>
