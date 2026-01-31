@@ -1,13 +1,9 @@
-/* 🇫🇷 Reset de base | 🇬🇧 Base reset | 🇷🇺 Сброс стилей */
 * { box-sizing: border-box; }
 
 body{
   margin:0;
   font-family: Arial, sans-serif;
-
-  /* 🇫🇷 Fond dégradé | 🇬🇧 Gradient background | 🇷🇺 Фоновый градиент */
   background: radial-gradient(circle at top left, #0f2027, #0b1320, #05070d);
-
   color:white;
   min-height:100vh;
   display:flex;
@@ -15,7 +11,7 @@ body{
   align-items:center;
 }
 
-/* 🇫🇷 Conteneur principal | 🇬🇧 Main container | 🇷🇺 Главный контейнер */
+/* ===== LAYOUT ===== */
 .container{
   width:min(1250px, 95%);
   display:flex;
@@ -24,7 +20,6 @@ body{
   justify-content:center;
 }
 
-/* 🇫🇷 Cartes générales | 🇬🇧 Cards | 🇷🇺 Общий стиль карточек */
 .card{
   border-radius:18px;
   background: linear-gradient(145deg, #111827, #0b1120);
@@ -32,7 +27,6 @@ body{
   padding:30px;
 }
 
-/* 🇫🇷 Carte gauche profil | 🇬🇧 Left card | 🇷🇺 Левая карточка */
 .card.left { 
   width:420px;
   text-align:center;
@@ -42,13 +36,13 @@ body{
   justify-content:center;
 }
 
-/* 🇫🇷 Carte droite code | 🇬🇧 Right code card | 🇷🇺 Правая карточка с кодом */
 .card.right { width:650px; }
 
-/* 🇫🇷 Avatar cercle | 🇬🇧 Avatar circle | 🇷🇺 Аватар */
+/* ===== LEFT CARD ===== */
 .avatar-wrap{
   width:120px;
   height:120px;
+  margin-bottom:18px;
   border-radius:50%;
   padding:4px;
   background: linear-gradient(90deg, #00ffd0, #a855f7);
@@ -61,7 +55,6 @@ body{
   object-fit:cover;
 }
 
-/* 🇫🇷 Texte profil | 🇬🇧 Profile text | 🇷🇺 Текст профиля */
 .text{
   opacity:.9;
   line-height:1.6;
@@ -69,9 +62,9 @@ body{
   max-width:360px;
 }
 
-/* 🇫🇷 Icônes sociales | 🇬🇧 Social icons | 🇷🇺 Соцсети */
 .icons{
   display:flex;
+  justify-content:center;
   gap:12px;
   margin-bottom:18px;
 }
@@ -83,23 +76,42 @@ body{
   align-items:center;
   justify-content:center;
   border-radius:10px;
+  text-decoration:none;
   color:#00ffd0;
   border:1px solid rgba(0,255,208,.25);
   background:rgba(0,255,208,.06);
-  text-decoration:none;
+  font-weight:bold;
+  transition:0.2s;
 }
 
-/* 🇫🇷 Bouton CV | 🇬🇧 Resume button | 🇷🇺 Кнопка */
+.icons a:hover{
+  background:rgba(0,255,208,.12);
+  transform:translateY(-2px);
+}
+
 .btn{
+  display:inline-block;
   padding:10px 18px;
   border-radius:999px;
+  text-decoration:none;
+  color:#fff;
   border:2px solid rgba(168,85,247,.7);
   background:rgba(255,255,255,.04);
-  color:white;
   font-weight:bold;
+  transition:.2s;
 }
 
-/* 🇫🇷 Barre Mac | 🇬🇧 Mac bar | 🇷🇺 Панель окна Mac */
+.btn:hover{
+  transform:translateY(-2px);
+  filter:brightness(1.1);
+}
+
+/* ===== RIGHT MAC WINDOW ===== */
+.right{
+  padding:0;
+  overflow:hidden;
+}
+
 .macbar{
   height:52px;
   display:flex;
@@ -107,36 +119,55 @@ body{
   gap:8px;
   padding:0 18px;
   background: linear-gradient(180deg, rgba(28,35,70,.95), rgba(12,16,34,.95));
+  border-bottom:1px solid rgba(255,255,255,.06);
 }
 
-/* 🇫🇷 Points Mac | 🇬🇧 Mac dots | 🇷🇺 Кнопки окна */
-.dot{ width:12px; height:12px; border-radius:50%; }
+/* MAC DOTS */
+.dot{
+  width:12px;
+  height:12px;
+  border-radius:50%;
+}
+
 .red{ background:#ff5f56; }
 .yellow{ background:#ffbd2e; }
 .green{ background:#27c93f; }
 
-/* 🇫🇷 Zone code | 🇬🇧 Code area | 🇷🇺 Блок кода */
+/* ===== CODE AREA ===== */
 .code{
+  margin:0;
   padding:22px;
   font-size:14px;
   line-height:1.65;
+  background:
+    radial-gradient(600px 400px at 20% 10%, rgba(0,255,204,.06), transparent 60%),
+    radial-gradient(600px 400px at 80% 30%, rgba(168,85,247,.08), transparent 60%),
+    rgba(8,10,22,.75);
+
+  overflow:hidden;
   white-space:pre-wrap;
+  word-break:break-word;
 }
 
-/* 🇫🇷 Couleurs syntaxe | 🇬🇧 Syntax colors | 🇷🇺 Подсветка кода */
+/* ===== CODE COLORS ===== */
 .pink{ color:#ff7b72; font-weight:600; }
 .white{ color:#e6edf3; }
-.orange{ color:#ffa657; }
+.orange{ color:#ffa657; font-weight:600; }
 
-/* 🇫🇷 Couleurs compétences | 🇬🇧 Skill colors | 🇷🇺 Цвета навыков */
-.skill1  { color:#7ee787; }
-.skill2  { color:#79c0ff; }
-.skill3  { color:#d2a8ff; }
-.skill4  { color:#ffa657; }
-.skill5  { color:#ff7b72; }
-.skill6  { color:#56d364; }
-.skill7  { color:#a5d6ff; }
-.skill8  { color:#f2cc60; }
-.skill9  { color:#ff9bce; }
-.skill10 { color:#b4f9ff; }
-.skill11 { color:#c9d1d9; }
+/* ===== MULTICOLOR SKILLS ===== */
+.code .skill1  { color:#7ee787; }
+.code .skill2  { color:#79c0ff; }
+.code .skill3  { color:#d2a8ff; }
+.code .skill4  { color:#ffa657; }
+.code .skill5  { color:#ff7b72; }
+.code .skill6  { color:#56d364; }
+.code .skill7  { color:#a5d6ff; }
+.code .skill8  { color:#f2cc60; }
+.code .skill9  { color:#ff9bce; }
+.code .skill10 { color:#b4f9ff; }
+.code .skill11 { color:#c9d1d9; }
+
+/* Убираем любые скроллы */
+pre, code {
+  overflow-x:hidden !important;
+}
