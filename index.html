@@ -1,57 +1,63 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Vladislav | Voltmax</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+
 <body>
-  <div class="page">
+  <div class="container">
 
-    <!-- TOP LOGO -->
-    <header class="topbar">
-      <div class="logo">
-        <img src="logo.png" alt="Voltmax" />
-        <span>VOLTMAX</span>
-      </div>
-    </header>
-
-    <!-- CONTENT -->
-    <div class="container">
-      <!-- LEFT CARD -->
-      <div class="card profile-card">
-        <img src="avatar.jpg" alt="Vladislav" class="avatar" />
-
-        <h1>⚡ Vladislav</h1>
-        <p class="subtitle">Smart Home • Électricité Haut de Gamme • Automation KNX</p>
-
-        <p class="description">
-          Professionnel passionné par l’électricité moderne, la domotique et
-          les installations premium pour villas et résidences de luxe sur la Côte d’Azur.
-        </p>
-
-        <div class="socials">
-          <a href="https://www.linkedin.com" target="_blank">in</a>
-          <a href="https://www.instagram.com" target="_blank">ig</a>
-          <a href="https://github.com" target="_blank">gh</a>
-          <a href="mailto:youremail@email.com">@</a>
-        </div>
-
-        <a href="#" class="btn">📄 Télécharger le CV</a>
+    <!-- LEFT CARD -->
+    <div class="card left">
+      <div class="avatar-wrap">
+        <img class="avatar" src="avatar.jpg" alt="Vladislav">
       </div>
 
-      <!-- RIGHT CARD -->
-      <div class="card code-card">
-<pre><code>const engineer = {
-  name: "Vladislav",
-  company: "Voltmax Électricité",
-  location: "France 🇫🇷 | Côte d’Azur",
-  specialization: [
-    "Électricité résidentielle haut de gamme",
-    "Domotique KNX",
-    "Vidéosurveillance",
-    "Systèmes d’alarme",
-    "Bornes de recharge EV"
+      <p class="text">
+        ⚡ Électricien premium. Propreté, précision, résultat.
+        Électricité haut de gamme • Domotique KNX • Sécurité • EV
+      </p>
+
+      <div class="icons">
+        <a href="https://github.com/" target="_blank">GH</a>
+        <a href="https://www.linkedin.com/" target="_blank">in</a>
+        <a href="https://www.facebook.com/" target="_blank">fb</a>
+        <a href="https://www.instagram.com/" target="_blank">ig</a>
+      </div>
+
+      <a class="btn" href="#">GET RESUME ⬇</a>
+    </div>
+
+    <!-- RIGHT MAC WINDOW -->
+    <div class="card right">
+      <div class="macbar">
+        <span class="dot red"></span>
+        <span class="dot yellow"></span>
+        <span class="dot green"></span>
+      </div>
+
+      <pre class="code"><code>
+<span class="pink">const</span> <span class="white">engineer</span> <span class="white">=</span> {
+  <span class="white">name</span>: <span class="green">"Vladislav"</span>,
+  <span class="white">company</span>: <span class="green">"Voltmax Électricité"</span>,
+  <span class="white">location</span>: <span class="green">"Côte d’Azur, France"</span>,
+
+  <span class="white">skills</span>: [
+    <span class="green">"Électricité haut de gamme"</span>,
+    <span class="green">"KNX"</span>,
+    <span class="green">"Vidéosurveillance"</span>,
+    <span class="green">"Alarme"</span>,
+    <span class="green">"Bornes de recharge EV"</span>,
   ],
-  clients: "Villas & propriétés premium",
-  tools: ["KNX","Hager","Schneider","Ajax","Hikvision","Dahua"],
-  status: "Disponible pour nouveaux projets",
-};</code></pre>
-      </div>
+
+  <span class="white">hireable</span>: <span class="orange">true</span>,
+};
+      </code></pre>
     </div>
 
   </div>
 </body>
+</html>
