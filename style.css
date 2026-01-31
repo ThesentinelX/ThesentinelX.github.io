@@ -1,142 +1,43 @@
-/* 🇫🇷 Reset de base | 🇬🇧 Base reset | 🇷🇺 Сброс стилей */
-* { box-sizing: border-box; }
-
-body{
-  margin:0;
-  font-family: Arial, sans-serif;
-
-  /* 🇫🇷 Fond dégradé | 🇬🇧 Gradient background | 🇷🇺 Фоновый градиент */
-  background: radial-gradient(circle at top left, #0f2027, #0b1320, #05070d);
-
-  color:white;
-  min-height:100vh;
-  display:flex;
-  justify-content:center;
-  align-items:center;
+/* ===== RIGHT MAC WINDOW: Rounded properly ===== */
+.card.right{
+  border-radius:24px;
+  padding:0;
+  overflow:hidden; /* важно: чтобы code не вылезал за края */
 }
 
-/* 🇫🇷 Conteneur principal | 🇬🇧 Main container | 🇷🇺 Главный контейнер */
-.container{
-  width:min(1250px, 95%);
-  display:flex;
-  gap:30px;
-  flex-wrap:wrap;
-  justify-content:center;
+.macbar{
+  border-top-left-radius:24px;
+  border-top-right-radius:24px;
 }
 
-/* 🇫🇷 Cartes générales | 🇬🇧 Cards | 🇷🇺 Общий стиль карточек */
-.card{
-  border-radius:18px;
-  background: linear-gradient(145deg, #111827, #0b1120);
-  box-shadow: 0 0 40px rgba(0,255,200,0.08);
-  padding:30px;
-}
-
-/* 🇫🇷 Carte gauche profil | 🇬🇧 Left card | 🇷🇺 Левая карточка */
-.card.left { 
-  width:420px;
-  text-align:center;
-  display:flex;
-  flex-direction:column;
-  align-items:center;
-  justify-content:center;
-}
-
-/* 🇫🇷 Carte droite code | 🇬🇧 Right code card | 🇷🇺 Правая карточка с кодом */
-.card.right { width:650px; }
-
-/* 🇫🇷 Avatar cercle | 🇬🇧 Avatar circle | 🇷🇺 Аватар */
-.avatar-wrap{
-  width:120px;
-  height:120px;
-  border-radius:50%;
-  padding:4px;
-  background: linear-gradient(90deg, #00ffd0, #a855f7);
-}
-
-.avatar{
-  width:100%;
-  height:100%;
-  border-radius:50%;
-  object-fit:cover;
-}
-
-/* 🇫🇷 Texte profil | 🇬🇧 Profile text | 🇷🇺 Текст профиля */
-.text{
-  opacity:.9;
-  line-height:1.6;
-  margin:10px 0 18px;
-  max-width:360px;
-}
-
-/* 🇫🇷 Icônes sociales | 🇬🇧 Social icons | 🇷🇺 Соцсети */
+/* ===== REAL ICON BUTTONS (SVG) ===== */
 .icons{
   display:flex;
+  justify-content:center;
   gap:12px;
   margin-bottom:18px;
 }
 
-.icons a{
-  width:36px;
-  height:36px;
+.icon-btn{
+  width:42px;
+  height:42px;
   display:flex;
   align-items:center;
   justify-content:center;
-  border-radius:10px;
-  color:#00ffd0;
+  border-radius:12px;
   border:1px solid rgba(0,255,208,.25);
   background:rgba(0,255,208,.06);
-  text-decoration:none;
+  transition:0.2s;
 }
 
-/* 🇫🇷 Bouton CV | 🇬🇧 Resume button | 🇷🇺 Кнопка */
-.btn{
-  padding:10px 18px;
-  border-radius:999px;
-  border:2px solid rgba(168,85,247,.7);
-  background:rgba(255,255,255,.04);
-  color:white;
-  font-weight:bold;
+.icon-btn svg{
+  width:20px;
+  height:20px;
+  fill:#00ffd0; /* цвет иконок */
+  opacity:.95;
 }
 
-/* 🇫🇷 Barre Mac | 🇬🇧 Mac bar | 🇷🇺 Панель окна Mac */
-.macbar{
-  height:52px;
-  display:flex;
-  align-items:center;
-  gap:8px;
-  padding:0 18px;
-  background: linear-gradient(180deg, rgba(28,35,70,.95), rgba(12,16,34,.95));
+.icon-btn:hover{
+  transform:translateY(-2px);
+  background:rgba(0,255,208,.12);
 }
-
-/* 🇫🇷 Points Mac | 🇬🇧 Mac dots | 🇷🇺 Кнопки окна */
-.dot{ width:12px; height:12px; border-radius:50%; }
-.red{ background:#ff5f56; }
-.yellow{ background:#ffbd2e; }
-.green{ background:#27c93f; }
-
-/* 🇫🇷 Zone code | 🇬🇧 Code area | 🇷🇺 Блок кода */
-.code{
-  padding:22px;
-  font-size:14px;
-  line-height:1.65;
-  white-space:pre-wrap;
-}
-
-/* 🇫🇷 Couleurs syntaxe | 🇬🇧 Syntax colors | 🇷🇺 Подсветка кода */
-.pink{ color:#ff7b72; font-weight:600; }
-.white{ color:#e6edf3; }
-.orange{ color:#ffa657; }
-
-/* 🇫🇷 Couleurs compétences | 🇬🇧 Skill colors | 🇷🇺 Цвета навыков */
-.skill1  { color:#7ee787; }
-.skill2  { color:#79c0ff; }
-.skill3  { color:#d2a8ff; }
-.skill4  { color:#ffa657; }
-.skill5  { color:#ff7b72; }
-.skill6  { color:#56d364; }
-.skill7  { color:#a5d6ff; }
-.skill8  { color:#f2cc60; }
-.skill9  { color:#ff9bce; }
-.skill10 { color:#b4f9ff; }
-.skill11 { color:#c9d1d9; }
