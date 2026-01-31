@@ -1,4 +1,5 @@
 * { box-sizing: border-box; }
+
 body{
   margin:0;
   font-family: Arial, sans-serif;
@@ -10,8 +11,9 @@ body{
   align-items:center;
 }
 
+/* ===== LAYOUT ===== */
 .container{
-  width:min(1050px, 95%);
+  width:min(1250px, 95%);
   display:flex;
   gap:30px;
   flex-wrap:wrap;
@@ -23,9 +25,12 @@ body{
   background: linear-gradient(145deg, #111827, #0b1120);
   box-shadow: 0 0 40px rgba(0,255,200,0.08);
   padding:30px;
-  width:460px;
 }
 
+.card.left { width:420px; }
+.card.right { width:650px; }
+
+/* ===== LEFT CARD ===== */
 .left{
   text-align:center;
 }
@@ -60,14 +65,23 @@ body{
 }
 
 .icons a{
-  width:36px; height:36px;
-  display:flex; align-items:center; justify-content:center;
+  width:36px;
+  height:36px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
   border-radius:10px;
   text-decoration:none;
   color:#00ffd0;
   border:1px solid rgba(0,255,208,.25);
   background:rgba(0,255,208,.06);
   font-weight:bold;
+  transition:0.2s;
+}
+
+.icons a:hover{
+  background:rgba(0,255,208,.12);
+  transform:translateY(-2px);
 }
 
 .btn{
@@ -79,8 +93,15 @@ body{
   border:2px solid rgba(168,85,247,.7);
   background:rgba(255,255,255,.04);
   font-weight:bold;
+  transition:.2s;
 }
 
+.btn:hover{
+  transform:translateY(-2px);
+  filter:brightness(1.1);
+}
+
+/* ===== RIGHT MAC WINDOW ===== */
 .right{
   padding:0;
   overflow:hidden;
@@ -101,23 +122,34 @@ body{
   height:12px;
   border-radius:50%;
 }
+
 .red{ background:#ff5f56; }
 .yellow{ background:#ffbd2e; }
-.green{ background:#27c93f; }
+.green-dot{ background:#27c93f; }
 
+/* ===== CODE AREA ===== */
 .code{
   margin:0;
   padding:22px;
-  background:
-    radial-gradient(600px 400px at 20% 10%, rgba(0,255,204,.10), transparent 60%),
-    radial-gradient(600px 400px at 80% 30%, rgba(168,85,247,.12), transparent 60%),
-    rgba(8,10,22,.55);
   font-size:14px;
-  line-height:1.6;
-  overflow:auto;
+  line-height:1.65;
+  background:
+    radial-gradient(600px 400px at 20% 10%, rgba(0,255,204,.06), transparent 60%),
+    radial-gradient(600px 400px at 80% 30%, rgba(168,85,247,.08), transparent 60%),
+    rgba(8,10,22,.75);
+
+  overflow:hidden;         /* Убираем скролл */
+  white-space:pre-wrap;    /* Перенос строк */
+  word-break:break-word;
 }
 
-.pink{ color:#ff6ad5; font-weight:700; }
-.green{ color:#50fa7b; }
-.orange{ color:#ffb86c; font-weight:700; }
-.white{ color:#e9f2ff; }
+/* ===== CODE COLORS (мягкие как IDE) ===== */
+.pink{ color:#ff7b72; font-weight:600; }
+.green{ color:#7ee787; }
+.orange{ color:#ffa657; font-weight:600; }
+.white{ color:#e6edf3; }
+
+/* Убираем любые горизонтальные скроллы */
+pre, code {
+  overflow-x:hidden !important;
+}
