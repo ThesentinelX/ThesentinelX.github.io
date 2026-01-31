@@ -27,18 +27,22 @@ body{
   padding:30px;
 }
 
-.card.left { width:420px; }
+.card.left { 
+  width:420px;
+  text-align:center;
+  display:flex;
+  flex-direction:column;
+  align-items:center;   /* Центрируем всё */
+  justify-content:center;
+}
+
 .card.right { width:650px; }
 
 /* ===== LEFT CARD ===== */
-.left{
-  text-align:center;
-}
-
 .avatar-wrap{
   width:120px;
   height:120px;
-  margin:0 auto 18px;
+  margin-bottom:18px;
   border-radius:50%;
   padding:4px;
   background: linear-gradient(90deg, #00ffd0, #a855f7);
@@ -55,6 +59,7 @@ body{
   opacity:.9;
   line-height:1.6;
   margin:10px 0 18px;
+  max-width:360px;
 }
 
 .icons{
@@ -117,6 +122,7 @@ body{
   border-bottom:1px solid rgba(255,255,255,.06);
 }
 
+/* MAC DOTS */
 .dot{
   width:12px;
   height:12px;
@@ -125,7 +131,7 @@ body{
 
 .red{ background:#ff5f56; }
 .yellow{ background:#ffbd2e; }
-.green-dot{ background:#27c93f; }
+.green{ background:#27c93f; }  /* ВЕРНУЛИ ЗЕЛЁНУЮ */
 
 /* ===== CODE AREA ===== */
 .code{
@@ -138,18 +144,30 @@ body{
     radial-gradient(600px 400px at 80% 30%, rgba(168,85,247,.08), transparent 60%),
     rgba(8,10,22,.75);
 
-  overflow:hidden;         /* Убираем скролл */
-  white-space:pre-wrap;    /* Перенос строк */
+  overflow:hidden;
+  white-space:pre-wrap;
   word-break:break-word;
 }
 
-/* ===== CODE COLORS (мягкие как IDE) ===== */
+/* ===== CODE COLORS ===== */
 .pink{ color:#ff7b72; font-weight:600; }
-.green{ color:#7ee787; }
-.orange{ color:#ffa657; font-weight:600; }
 .white{ color:#e6edf3; }
+.orange{ color:#ffa657; font-weight:600; }
 
-/* Убираем любые горизонтальные скроллы */
+/* Разноцветные skills */
+.skill1{ color:#7ee787; }
+.skill2{ color:#79c0ff; }
+.skill3{ color:#d2a8ff; }
+.skill4{ color:#ffa657; }
+.skill5{ color:#ff7b72; }
+.skill6{ color:#56d364; }
+.skill7{ color:#a5d6ff; }
+.skill8{ color:#f2cc60; }
+.skill9{ color:#ff9bce; }
+.skill10{ color:#b4f9ff; }
+.skill11{ color:#c9d1d9; }
+
+/* Убираем скроллы */
 pre, code {
   overflow-x:hidden !important;
 }
