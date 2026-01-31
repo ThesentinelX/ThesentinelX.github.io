@@ -32,7 +32,7 @@ body{
   text-align:center;
   display:flex;
   flex-direction:column;
-  align-items:center;   /* Центрируем всё */
+  align-items:center;
   justify-content:center;
 }
 
@@ -131,7 +131,7 @@ body{
 
 .red{ background:#ff5f56; }
 .yellow{ background:#ffbd2e; }
-.green{ background:#27c93f; }  /* ВЕРНУЛИ ЗЕЛЁНУЮ */
+.green{ background:#27c93f; }
 
 /* ===== CODE AREA ===== */
 .code{
@@ -154,20 +154,20 @@ body{
 .white{ color:#e6edf3; }
 .orange{ color:#ffa657; font-weight:600; }
 
-/* Разноцветные skills */
-.skill1{ color:#7ee787; }
-.skill2{ color:#79c0ff; }
-.skill3{ color:#d2a8ff; }
-.skill4{ color:#ffa657; }
-.skill5{ color:#ff7b72; }
-.skill6{ color:#56d364; }
-.skill7{ color:#a5d6ff; }
-.skill8{ color:#f2cc60; }
-.skill9{ color:#ff9bce; }
-.skill10{ color:#b4f9ff; }
-.skill11{ color:#c9d1d9; }
+/* ===== MULTICOLOR SKILLS ===== */
+.code .skill1  { color:#7ee787; }
+.code .skill2  { color:#79c0ff; }
+.code .skill3  { color:#d2a8ff; }
+.code .skill4  { color:#ffa657; }
+.code .skill5  { color:#ff7b72; }
+.code .skill6  { color:#56d364; }
+.code .skill7  { color:#a5d6ff; }
+.code .skill8  { color:#f2cc60; }
+.code .skill9  { color:#ff9bce; }
+.code .skill10 { color:#b4f9ff; }
+.code .skill11 { color:#c9d1d9; }
 
-/* Убираем скроллы */
+/* Убираем любые скроллы */
 pre, code {
   overflow-x:hidden !important;
 }
