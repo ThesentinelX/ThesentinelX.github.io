@@ -1,140 +1,85 @@
 <!DOCTYPE html>
-
 <html lang="fr">
-
 <head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
- <meta charset="UTF-8" />
+  <!-- 🇫🇷 Titre de la page | 🇬🇧 Page title | 🇷🇺 Заголовок страницы -->
+  <title>Vladislav | Voltmax</title>
 
- <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
- <title>Vladislav | Voltmax</title>
-
- <link rel="stylesheet" href="style.css" />
-
+  <!-- 🇫🇷 Lien vers le CSS | 🇬🇧 Link to CSS | 🇷🇺 Подключение стилей -->
+  <link rel="stylesheet" href="style.css" />
 </head>
 
-
-
 <body>
+  <!-- 🇫🇷 Conteneur principal | 🇬🇧 Main container | 🇷🇺 Главный контейнер -->
+  <div class="container">
 
- <div class="container">
+    <!-- ================= LEFT CARD ================= -->
+    <!-- 🇫🇷 Carte profil gauche | 🇬🇧 Left profile card | 🇷🇺 Левая карточка профиля -->
+    <div class="card left">
 
+      <!-- 🇫🇷 Photo / Avatar | 🇬🇧 Avatar image | 🇷🇺 Фото профиля -->
+      <div class="avatar-wrap">
+        <img class="avatar" src="avatar.jpg" alt="Vladislav">
+      </div>
 
+      <!-- 🇫🇷 Description métier | 🇬🇧 Job description | 🇷🇺 Описание деятельности -->
+      <p class="text">
+        Ingénieur Smart Building & IT • Domotique KNX • Réseaux • Sécurité • EV •
+        Systèmes connectés & automatisation • Sud de la France
+      </p>
 
-  <!-- LEFT CARD -->
+      <!-- 🇫🇷 Réseaux sociaux | 🇬🇧 Social links | 🇷🇺 Соцсети -->
+      <div class="icons">
+        <a href="https://github.com/" target="_blank">GH</a>
+        <a href="https://www.linkedin.com/" target="_blank">in</a>
+        <a href="https://www.facebook.com/" target="_blank">fb</a>
+        <a href="https://www.instagram.com/" target="_blank">ig</a>
+      </div>
 
-  <div class="card left">
-
-   <div class="avatar-wrap">
-
-    <img class="avatar" src="avatar.jpg" alt="Vladislav">
-
-   </div>
-
-
-
-   <p class="text">
-
-    Ingénieur Smart Building & IT • Domotique KNX • Réseaux • Sécurité • EV •
-
-    Systèmes connectés & automatisation • Sud de la France
-
-   </p>
-
-
-
-   <div class="icons">
-
-    <a href="https://github.com/" target="_blank" rel="noreferrer">GH</a>
-
-    <a href="https://www.linkedin.com/" target="_blank" rel="noreferrer">in</a>
-
-    <a href="https://www.facebook.com/" target="_blank" rel="noreferrer">fb</a>
-
-    <a href="https://www.instagram.com/" target="_blank" rel="noreferrer">ig</a>
-
-   </div>
+      <!-- 🇫🇷 Bouton CV | 🇬🇧 Resume button | 🇷🇺 Кнопка резюме -->
+      <a class="btn" href="#">GET RESUME ⬇</a>
+    </div>
 
 
+    <!-- ================= RIGHT MAC WINDOW ================= -->
+    <!-- 🇫🇷 Fenêtre style Mac avec code | 🇬🇧 Mac-style code window | 🇷🇺 Окно как в Mac с кодом -->
+    <div class="card right">
 
-   <a class="btn" href="#">GET RESUME ⬇</a>
+      <!-- 🇫🇷 Barre supérieure Mac | 🇬🇧 Mac top bar | 🇷🇺 Верхняя панель Mac -->
+      <div class="macbar">
+        <span class="dot red"></span>
+        <span class="dot yellow"></span>
+        <span class="dot green"></span>
+      </div>
 
-  </div>
-
-
-
-  <!-- RIGHT MAC WINDOW -->
-
-  <div class="card right">
-
-   <div class="macbar">
-
-    <span class="dot red"></span>
-
-    <span class="dot yellow"></span>
-
-    <span class="dot green"></span>
-
-   </div>
-
-
-
-   <pre class="code"><code>
-
+      <!-- 🇫🇷 Bloc code | 🇬🇧 Code block | 🇷🇺 Блок кода -->
+      <pre class="code"><code>
 <span class="pink">const</span> <span class="white">engineer</span> <span class="white">=</span> {
+  <span class="white">name</span>: <span class="skill2">"Vladislav"</span>,
+  <span class="white">company</span>: <span class="skill3">"Voltmax Électricité"</span>,
+  <span class="white">location</span>: <span class="skill8">"Côte d’Azur, France"</span>,
 
- <span class="white">name</span>: <span class="skill2">"Vladislav"</span>,
+  <span class="white">skills</span>: [
+    <span class="skill1">"Électricité haut de gamme • Lighting scénarios"</span>,
+    <span class="skill2">"KNX (basic) • ETS6 configuration"</span>,
+    <span class="skill3">"Bornes de recharge EV (Hager)"</span>,
+    <span class="skill4">"Alarmes (Ajax) • Vidéosurveillance (Hikvision/Dahua)"</span>,
+    <span class="skill5">"Administration réseaux (LAN/Wi-Fi/VLAN)"</span>,
+    <span class="skill6">"Cybersecurity basics • segmentation IoT"</span>,
+    <span class="skill7">"VPN (WireGuard) • Firewall (OPNsense)"</span>,
+    <span class="skill8">"DNS sécurisé (Pi-hole / Unbound / DoT)"</span>,
+    <span class="skill9">"Linux (Debian/Ubuntu) • Docker"</span>,
+    <span class="skill10">"Python (automation scripts)"</span>,
+    <span class="skill11">"Front-end (HTML/CSS/JS basics)"</span>,
+  ],
 
- <span class="white">company</span>: <span class="skill3">"Voltmax Électricité"</span>,
-
- <span class="white">location</span>: <span class="skill8">"Côte d’Azur, France"</span>,
-
-
-
- <span class="white">skills</span>: [
-
-  <span class="skill1">"Électricité haut de gamme • Lighting scénarios"</span>,
-
-  <span class="skill2">"KNX (basic) • ETS6 configuration"</span>,
-
-  <span class="skill3">"Bornes de recharge EV (Hager)"</span>,
-
-  <span class="skill4">"Alarmes (Ajax) • Vidéosurveillance (Hikvision/Dahua)"</span>,
-
-  <span class="skill5">"Administration réseaux (LAN/Wi-Fi/VLAN)"</span>,
-
-  <span class="skill6">"Cybersecurity basics • segmentation IoT"</span>,
-
-  <span class="skill7">"VPN (WireGuard) • Firewall (OPNsense)"</span>,
-
-  <span class="skill8">"DNS sécurisé (Pi-hole / Unbound / DoT)"</span>,
-
-  <span class="skill9">"Linux (Debian/Ubuntu) • Docker"</span>,
-
-  <span class="skill10">"Python (automation scripts)"</span>,
-
-  <span class="skill11">"Front-end (HTML/CSS/JS basics)"</span>,
-
- ],
-
-
-
- <span class="white">hireable</span>: <span class="orange">true</span>,
-
+  <span class="white">hireable</span>: <span class="orange">true</span>,
 };
-
-   </code></pre>
+      </code></pre>
+    </div>
 
   </div>
-
-
-
- </div>
-
 </body>
-
 </html>
-
-
-
